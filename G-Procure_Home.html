@@ -375,98 +375,6 @@
   }
   .card__owner-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-emerald-50); }
 
-  /* ────────────────  AUTHOR  ──────────────── */
-  .author__card {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    background: var(--color-white);
-    border: 1px solid var(--color-graphite-15);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    overflow: hidden;
-  }
-
-  .author__identity {
-    background: linear-gradient(160deg, #15413d 0%, #0b2a33 100%);
-    padding: var(--space-4);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .author__monogram {
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, var(--color-emerald-50), var(--color-emerald));
-    color: var(--color-white);
-    display: grid;
-    place-items: center;
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    box-shadow: 0 8px 22px rgba(0, 160, 114, 0.35);
-    margin-bottom: var(--space-3);
-  }
-  .author__name { font-size: 22px; font-weight: 800; color: var(--color-white); letter-spacing: -0.01em; }
-  .author__role {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-emerald-50);
-    margin-top: var(--space-1);
-  }
-  .author__company { font-size: 14px; color: var(--color-graphite-30); margin-top: 4px; }
-
-  .author__body { padding: var(--space-5) var(--space-4); }
-  .author__bio {
-    font-size: 15.5px;
-    line-height: 1.7;
-    color: var(--color-graphite);
-    max-width: 660px;
-    margin-bottom: var(--space-4);
-  }
-  .author__contacts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3) var(--space-4);
-    padding-top: var(--space-3);
-    border-top: 1px solid var(--color-graphite-15);
-  }
-  .author__contact { display: flex; gap: var(--space-2); align-items: flex-start; }
-  .author__contact-icon {
-    width: 38px; height: 38px;
-    flex-shrink: 0;
-    border-radius: var(--radius-sm);
-    background: var(--color-green-5);
-    border: 1px solid var(--color-green-15);
-    color: var(--color-emerald);
-    display: grid;
-    place-items: center;
-  }
-  .author__contact-icon svg {
-    width: 18px; height: 18px;
-    stroke: currentColor; stroke-width: 1.5; fill: none;
-    stroke-linecap: round; stroke-linejoin: round;
-  }
-  .author__contact-text { display: flex; flex-direction: column; min-width: 0; }
-  .author__contact-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-graphite-50);
-    margin-bottom: 2px;
-  }
-  .author__contact-value { font-size: 14px; color: var(--color-graphite); word-break: break-word; }
-  .author__contact-value a {
-    color: var(--color-emerald);
-    font-weight: 600;
-    transition: color var(--transition-fast);
-  }
-  .author__contact-value a:hover { color: var(--color-emerald-120); }
-
   /* ────────────────  FOOTER  ──────────────── */
   .footer {
     margin-top: var(--space-6);
@@ -499,13 +407,6 @@
   .footer__meta a:hover { color: var(--color-emerald); border-color: var(--color-emerald); }
 
   /* ────────────────  RESPONSIVE  ──────────────── */
-  @media (max-width: 860px) {
-    .author__card { grid-template-columns: 1fr; }
-    .author__identity { padding: var(--space-4) var(--space-4) var(--space-3); }
-    .author__body { padding: var(--space-4) var(--space-3); }
-    .author__contacts { grid-template-columns: 1fr; }
-  }
-
   @media (max-width: 640px) {
     .site-header__inner { height: 64px; }
     .brand__product-tag { display: none; }
@@ -542,7 +443,7 @@
     </div>
 
     <div class="site-header__actions">
-      <a class="nav-link" href="#author" data-lt="Apie kūrėją" data-en="About the author"></a>
+      <a class="nav-link" href="G-Procure_About.html" data-lt="Apie kūrėją" data-en="About the author"></a>
       <div class="header-meta">
         <span class="header-meta__dot" aria-hidden="true"></span>
         <span data-lt="Sistema veikia · v1.0" data-en="System online · v1.0"></span>
@@ -741,70 +642,6 @@
     </div>
   </section>
 
-  <!-- ════════ AUTHOR ════════ -->
-  <section class="section" id="author">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-lt="Apie kūrėją" data-en="About the author"></h2>
-        <span class="section__hint" data-lt="G-Procure platformos iniciatorius ir kūrėjas" data-en="Initiator and author of the G-Procure platform"></span>
-      </div>
-
-      <div class="author__card">
-        <aside class="author__identity">
-          <div class="author__monogram" aria-hidden="true">AJ</div>
-          <div class="author__name">Arūnas Jurgelaitis</div>
-          <div class="author__role" data-lt="Pirkimų skyriaus vadovas" data-en="Head of Procurement Division"></div>
-          <div class="author__company">AB „Litgrid“</div>
-        </aside>
-
-        <div class="author__body">
-          <p class="author__bio" data-lt="Pirkimų funkcijos vadovas AB „Litgrid“, Lietuvos elektros perdavimo sistemos operatoriuje ir nacionalinės svarbos energetikos infrastruktūros įmonėje. Atsakomybės sritis apima viešųjų pirkimų valdymą pagal Pirkimų, atliekamų vandentvarkos, energetikos, transporto ar pašto paslaugų srities perkančiųjų subjektų, įstatymą (PSĮ), strateginį pirkimų planavimą, tiekėjų santykių valdymą, pirkimų rizikų valdymą ir procesų skaitmeninimą. G-Procure platforma yra šio darbo tęsinys: iniciatyva, kuria sudėtingi pirkimų procesai paverčiami skaidresniais, efektyvesniais ir patogiau pasiekiamais visai EPSO-G grupei." data-en="Head of the procurement function at Litgrid AB, Lithuania's electricity transmission system operator and a critical national energy infrastructure company. The role spans public procurement governance under the Law on Procurement by Contracting Entities in the Water, Energy, Transport and Postal Services Sectors (PSĮ), strategic procurement planning, supplier relationship management, procurement risk management and process digitalisation. The G-Procure platform is a continuation of that work: an initiative to make complex procurement processes more transparent, efficient and accessible across the EPSO-G Group."></p>
-
-          <div class="author__contacts">
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="Adresas" data-en="Address"></span>
-                <span class="author__contact-value" data-lt="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lietuva" data-en="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lithuania"></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-1Z"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="Telefonas" data-en="Phone"></span>
-                <span class="author__contact-value"><a href="tel:+37065611391">+370 656 11391</a></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="El. paštas" data-en="Email"></span>
-                <span class="author__contact-value"><a href="mailto:arunas.jurgelaitis@litgrid.eu">arunas.jurgelaitis@litgrid.eu</a></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="6.8" r="0.6"/><path d="M11 17v-4.2a2.8 2.8 0 0 1 5.6 0V17"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label">LinkedIn</span>
-                <span class="author__contact-value"><a href="https://www.linkedin.com/in/arunas-jurgelaitis" target="_blank" rel="noopener">linkedin.com/in/arunas-jurgelaitis</a></span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <!-- ════════ FOOTER ════════ -->
