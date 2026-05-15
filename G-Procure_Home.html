@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>G-Procure — Intelligent Procurement for EPSO-G Group</title>
-<meta name="description" content="G-Procure — vieninga pirkimų skaitmeninių įrankių platforma EPSO-G grupės įmonėms." />
+<title>G-Procure | Intelligent Procurement for EPSO-G Group</title>
+<meta name="description" content="G-Procure. Vieninga pirkimų skaitmeninių įrankių platforma EPSO-G grupės įmonėms." />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='white'/><path d='M25.83 11.37V8.32C25.83 6.63 25.15 5.15 23.82 3.93C22.49 2.72 20.79 2.11 18.77 2.11H13.4C11.32 2.11 9.58 2.72 8.22 3.93C6.86 5.14 6.17 6.63 6.17 8.32V24.4C6.17 26.1 6.86 27.59 8.22 28.8C9.58 30 11.32 30.62 13.4 30.62H18.77C20.79 30.62 22.49 30 23.82 28.8C25.15 27.59 25.83 26.11 25.83 24.4V16.02H15.62V19.01H22.49V23.85C22.49 24.94 22.09 25.85 21.32 26.55C20.55 27.26 19.59 27.62 18.48 27.62H13.55C12.44 27.62 11.48 27.26 10.71 26.55C9.94 25.85 9.55 24.94 9.55 23.85V8.88C9.55 7.79 9.94 6.88 10.71 6.18C11.48 5.47 12.44 5.11 13.55 5.11H18.48C19.59 5.11 20.55 5.47 21.32 6.18C22.09 6.88 22.49 7.79 22.49 8.88V11.37H25.83Z' fill='%2300A072'/></svg>" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,15 +59,8 @@
     --transition-med: 240ms ease;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
   body {
     font-family: var(--font-base);
@@ -112,29 +105,13 @@
     gap: var(--space-3);
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-  }
+  .brand { display: flex; align-items: center; gap: var(--space-2); }
 
-  .brand__logo {
-    height: 28px;
-    width: auto;
-    flex-shrink: 0;
-  }
+  .brand__logo { height: 28px; width: auto; flex-shrink: 0; }
 
-  .brand__divider {
-    width: 1px;
-    height: 26px;
-    background: var(--color-graphite-15);
-  }
+  .brand__divider { width: 1px; height: 26px; background: var(--color-graphite-15); }
 
-  .brand__product {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-  }
+  .brand__product { display: flex; flex-direction: column; line-height: 1.1; }
 
   .brand__product-name {
     font-size: 17px;
@@ -142,11 +119,7 @@
     letter-spacing: -0.01em;
     color: var(--color-graphite);
   }
-
-  .brand__product-name em {
-    color: var(--color-emerald);
-    font-style: normal;
-  }
+  .brand__product-name em { color: var(--color-emerald); font-style: normal; }
 
   .brand__product-tag {
     font-size: 11px;
@@ -157,14 +130,25 @@
     margin-top: 2px;
   }
 
+  .site-header__actions { display: flex; align-items: center; gap: var(--space-2); }
+
+  .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-graphite-50);
+    transition: color var(--transition-fast);
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--color-emerald); }
+
   .header-meta {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: var(--space-1);
     font-size: 13px;
     color: var(--color-graphite-50);
+    white-space: nowrap;
   }
-
   .header-meta__dot {
     width: 8px;
     height: 8px;
@@ -173,11 +157,32 @@
     box-shadow: 0 0 0 4px rgba(0, 160, 114, 0.12);
   }
 
-  /* ────────────────  HERO  ──────────────── */
-  .hero {
-    padding: var(--space-7) 0 var(--space-6);
-    position: relative;
+  .lang-switch {
+    display: inline-flex;
+    border: 1px solid var(--color-graphite-15);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--color-white);
   }
+  .lang-switch__btn {
+    border: 0;
+    background: transparent;
+    font-family: var(--font-base);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-graphite-50);
+    padding: 5px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  .lang-switch__btn:hover { color: var(--color-graphite); }
+  .lang-switch__btn[aria-pressed="true"] { background: var(--color-emerald); color: var(--color-white); }
+  .lang-switch__btn:focus-visible { outline: 2px solid var(--color-emerald); outline-offset: 2px; }
+
+  /* ────────────────  HERO  ──────────────── */
+  .hero { padding: var(--space-7) 0 var(--space-6); position: relative; }
 
   .hero__eyebrow {
     display: inline-flex;
@@ -203,47 +208,17 @@
     line-height: 1.05;
     margin-bottom: var(--space-3);
   }
-
-  .hero__title em {
-    color: var(--color-emerald);
-    font-style: normal;
-  }
+  .hero__title em { color: var(--color-emerald); font-style: normal; }
 
   .hero__lead {
     font-size: clamp(17px, 1.6vw, 19px);
     color: var(--color-graphite-50);
     max-width: 720px;
-    margin-bottom: var(--space-4);
     line-height: 1.6;
   }
 
-  .hero__stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
-    padding-top: var(--space-3);
-    border-top: 1px solid var(--color-graphite-15);
-    max-width: 720px;
-  }
-
-  .hero__stat-num {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--color-graphite);
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-
-  .hero__stat-label {
-    font-size: 13px;
-    color: var(--color-graphite-50);
-    margin-top: 6px;
-  }
-
   /* ────────────────  SECTIONS  ──────────────── */
-  .section {
-    padding: var(--space-5) 0 var(--space-6);
-  }
+  .section { padding: var(--space-5) 0 var(--space-6); }
 
   .section__head {
     display: flex;
@@ -253,18 +228,13 @@
     margin-bottom: var(--space-4);
     flex-wrap: wrap;
   }
-
   .section__title {
     font-size: 24px;
     font-weight: 800;
     color: var(--color-graphite);
     letter-spacing: -0.015em;
   }
-
-  .section__hint {
-    font-size: 13px;
-    color: var(--color-graphite-50);
-  }
+  .section__hint { font-size: 13px; color: var(--color-graphite-50); }
 
   /* ────────────────  PROJECT GRID  ──────────────── */
   .grid {
@@ -288,7 +258,6 @@
     overflow: hidden;
     isolation: isolate;
   }
-
   .card::before {
     content: "";
     position: absolute;
@@ -298,19 +267,13 @@
     transition: opacity var(--transition-med);
     z-index: -1;
   }
-
   .card:hover {
     border-color: var(--color-emerald-50);
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px);
   }
-
   .card:hover::before { opacity: 1; }
-
-  .card:focus-within {
-    outline: 2px solid var(--color-emerald);
-    outline-offset: 2px;
-  }
+  .card:focus-within { outline: 2px solid var(--color-emerald); outline-offset: 2px; }
 
   .card__top {
     display: flex;
@@ -332,20 +295,11 @@
     transition: background var(--transition-fast), color var(--transition-fast);
     flex-shrink: 0;
   }
-
-  .card:hover .card__icon {
-    background: var(--color-emerald);
-    color: var(--color-white);
-  }
-
+  .card:hover .card__icon { background: var(--color-emerald); color: var(--color-white); }
   .card__icon svg {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    stroke-width: 1.5;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    width: 24px; height: 24px;
+    stroke: currentColor; stroke-width: 1.5; fill: none;
+    stroke-linecap: round; stroke-linejoin: round;
   }
 
   .card__badge {
@@ -360,7 +314,6 @@
     border: 1px solid var(--color-graphite-15);
     white-space: nowrap;
   }
-
   .card__badge--planning { background: var(--color-cyan-5); color: var(--color-blue); border-color: rgba(0, 102, 125, 0.18); }
   .card__badge--analysis { background: #FFF8E8; color: #8C6A1F; border-color: #F4E4BD; }
   .card__badge--execution { background: var(--color-green-5); color: var(--color-emerald-120); border-color: var(--color-green-15); }
@@ -373,7 +326,6 @@
     letter-spacing: -0.012em;
     margin-bottom: 6px;
   }
-
   .card__subtitle {
     font-size: 13px;
     font-weight: 700;
@@ -382,7 +334,6 @@
     text-transform: uppercase;
     margin-bottom: var(--space-2);
   }
-
   .card__desc {
     color: var(--color-graphite-50);
     font-size: 14.5px;
@@ -390,7 +341,6 @@
     margin-bottom: var(--space-3);
     flex-grow: 1;
   }
-
   .card__footer {
     display: flex;
     align-items: center;
@@ -398,7 +348,6 @@
     padding-top: var(--space-2);
     border-top: 1px solid var(--color-graphite-15);
   }
-
   .card__link {
     display: inline-flex;
     align-items: center;
@@ -406,30 +355,17 @@
     font-size: 14px;
     font-weight: 700;
     color: var(--color-emerald);
-    transition: gap var(--transition-fast), color var(--transition-fast);
+    transition: color var(--transition-fast);
   }
-
   .card__link::after {
     content: "→";
     font-size: 18px;
     line-height: 1;
     transition: transform var(--transition-fast);
   }
-
-  .card:hover .card__link {
-    color: var(--color-emerald-120);
-  }
-
-  .card:hover .card__link::after {
-    transform: translateX(4px);
-  }
-
-  .card__stretched-link {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-  }
-
+  .card:hover .card__link { color: var(--color-emerald-120); }
+  .card:hover .card__link::after { transform: translateX(4px); }
+  .card__stretched-link { position: absolute; inset: 0; z-index: 1; }
   .card__owner {
     font-size: 12px;
     color: var(--color-graphite-50);
@@ -437,13 +373,99 @@
     align-items: center;
     gap: 6px;
   }
+  .card__owner-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-emerald-50); }
 
-  .card__owner-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-emerald-50);
+  /* ────────────────  AUTHOR  ──────────────── */
+  .author__card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: var(--color-white);
+    border: 1px solid var(--color-graphite-15);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
   }
+
+  .author__identity {
+    background: linear-gradient(160deg, #15413d 0%, #0b2a33 100%);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .author__monogram {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--color-emerald-50), var(--color-emerald));
+    color: var(--color-white);
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    box-shadow: 0 8px 22px rgba(0, 160, 114, 0.35);
+    margin-bottom: var(--space-3);
+  }
+  .author__name { font-size: 22px; font-weight: 800; color: var(--color-white); letter-spacing: -0.01em; }
+  .author__role {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-emerald-50);
+    margin-top: var(--space-1);
+  }
+  .author__company { font-size: 14px; color: var(--color-graphite-30); margin-top: 4px; }
+
+  .author__body { padding: var(--space-5) var(--space-4); }
+  .author__bio {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--color-graphite);
+    max-width: 660px;
+    margin-bottom: var(--space-4);
+  }
+  .author__contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3) var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-graphite-15);
+  }
+  .author__contact { display: flex; gap: var(--space-2); align-items: flex-start; }
+  .author__contact-icon {
+    width: 38px; height: 38px;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    background: var(--color-green-5);
+    border: 1px solid var(--color-green-15);
+    color: var(--color-emerald);
+    display: grid;
+    place-items: center;
+  }
+  .author__contact-icon svg {
+    width: 18px; height: 18px;
+    stroke: currentColor; stroke-width: 1.5; fill: none;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .author__contact-text { display: flex; flex-direction: column; min-width: 0; }
+  .author__contact-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-graphite-50);
+    margin-bottom: 2px;
+  }
+  .author__contact-value { font-size: 14px; color: var(--color-graphite); word-break: break-word; }
+  .author__contact-value a {
+    color: var(--color-emerald);
+    font-weight: 600;
+    transition: color var(--transition-fast);
+  }
+  .author__contact-value a:hover { color: var(--color-emerald-120); }
 
   /* ────────────────  FOOTER  ──────────────── */
   .footer {
@@ -452,7 +474,6 @@
     border-top: 1px solid var(--color-graphite-15);
     background: var(--color-white);
   }
-
   .footer__inner {
     display: flex;
     justify-content: space-between;
@@ -460,7 +481,6 @@
     gap: var(--space-3);
     flex-wrap: wrap;
   }
-
   .footer__brand {
     display: flex;
     align-items: center;
@@ -468,34 +488,29 @@
     font-size: 13px;
     color: var(--color-graphite-50);
   }
-
   .footer__brand img { height: 22px; width: auto; opacity: 0.85; }
-
-  .footer__meta {
-    font-size: 12px;
-    color: var(--color-graphite-50);
-    letter-spacing: 0.02em;
-  }
-
+  .footer__meta { font-size: 12px; color: var(--color-graphite-50); letter-spacing: 0.02em; }
   .footer__meta a {
     color: var(--color-graphite);
     font-weight: 600;
     border-bottom: 1px solid var(--color-graphite-15);
     transition: color var(--transition-fast), border-color var(--transition-fast);
   }
-
-  .footer__meta a:hover {
-    color: var(--color-emerald);
-    border-color: var(--color-emerald);
-  }
+  .footer__meta a:hover { color: var(--color-emerald); border-color: var(--color-emerald); }
 
   /* ────────────────  RESPONSIVE  ──────────────── */
+  @media (max-width: 860px) {
+    .author__card { grid-template-columns: 1fr; }
+    .author__identity { padding: var(--space-4) var(--space-4) var(--space-3); }
+    .author__body { padding: var(--space-4) var(--space-3); }
+    .author__contacts { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 640px) {
     .site-header__inner { height: 64px; }
     .brand__product-tag { display: none; }
-    .header-meta { display: none; }
+    .header-meta, .nav-link { display: none; }
     .hero { padding: var(--space-5) 0 var(--space-4); }
-    .hero__stats { gap: var(--space-3); }
     .grid { grid-template-columns: 1fr; }
     .card__top { flex-direction: column; gap: var(--space-2); }
   }
@@ -507,7 +522,6 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <div class="brand">
-      <!-- EPSO-G inline SVG logo -->
       <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293.59339 68.8758" aria-label="EPSO-G">
         <g fill="#00A072">
           <polygon points="9.31846 36.7141 36.98607 36.7141 36.98607 29.68406 9.31846 29.68406 9.31846 8.48928 39.3066 8.48928 39.3066 1.46007 1.54699 1.46007 1.54699 67.25986 40.23534 67.25986 40.23534 60.23064 9.31846 60.23064 9.31846 36.7141"/>
@@ -523,13 +537,20 @@
 
       <div class="brand__product">
         <span class="brand__product-name">G-<em>Procure</em></span>
-        <span class="brand__product-tag">Procurement Platform</span>
+        <span class="brand__product-tag" data-lt="Pirkimų platforma" data-en="Procurement Platform"></span>
       </div>
     </div>
 
-    <div class="header-meta">
-      <span class="header-meta__dot" aria-hidden="true"></span>
-      <span>Sistema veikia · v1.0</span>
+    <div class="site-header__actions">
+      <a class="nav-link" href="#author" data-lt="Apie kūrėją" data-en="About the author"></a>
+      <div class="header-meta">
+        <span class="header-meta__dot" aria-hidden="true"></span>
+        <span data-lt="Sistema veikia · v1.0" data-en="System online · v1.0"></span>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Kalba / Language">
+        <button type="button" class="lang-switch__btn" data-lang="lt" aria-pressed="true">LT</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </div>
   </div>
 </header>
@@ -538,9 +559,9 @@
   <!-- ════════ HERO ════════ -->
   <section class="hero">
     <div class="container">
-      <span class="hero__eyebrow">EPSO-G grupės pirkimų ekosistema</span>
-      <h1 class="hero__title">Pirkimų skaitmeninė<br/><em>darbo aplinka</em>.</h1>
-      <p class="hero__lead">Intelligent Procurement for EPSO-G Group. Visi įrankiai vienoje vietoje, struktūruotai ir patogiai pasiekiami kasdieniam darbui.</p>
+      <span class="hero__eyebrow" data-lt="EPSO-G grupės pirkimų ekosistema" data-en="EPSO-G Group procurement ecosystem"></span>
+      <h1 class="hero__title" data-lt="Pirkimų skaitmeninė<br><em>darbo aplinka</em>." data-en="A digital workspace<br>for <em>procurement</em>."></h1>
+      <p class="hero__lead" data-lt="Intelligent Procurement for EPSO-G Group. Visi įrankiai vienoje vietoje, struktūruotai ir patogiai pasiekiami kasdieniam darbui." data-en="Intelligent Procurement for EPSO-G Group. Every tool in one place, structured and easy to reach for everyday work."></p>
     </div>
   </section>
 
@@ -548,28 +569,28 @@
   <section class="section" id="tools">
     <div class="container">
       <div class="section__head">
-        <h2 class="section__title">Pirkimų įrankių katalogas</h2>
-        <span class="section__hint">Spustelėkite kortelę, kad atidarytumėte įrankį</span>
+        <h2 class="section__title" data-lt="Pirkimų įrankių katalogas" data-en="Procurement tools catalogue"></h2>
+        <span class="section__hint" data-lt="Spustelėkite kortelę, kad atidarytumėte įrankį" data-en="Click a card to open the tool"></span>
       </div>
 
       <div class="grid">
 
-        <!-- ─── 1. PP-Planing ─── -->
+        <!-- ─── 1. PP-Planning ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 5h18M3 12h18M3 19h12"/><circle cx="20" cy="19" r="2"/></svg>
             </div>
-            <span class="card__badge card__badge--planning">Planavimas</span>
+            <span class="card__badge card__badge--planning" data-lt="Planavimas" data-en="Planning"></span>
           </div>
           <span class="card__subtitle">PP-Planning</span>
-          <h3 class="card__title">Pirkimų planavimas</h3>
-          <p class="card__desc">EPSO-G grupės metinio pirkimų plano sudarymo MVP. Struktūruotas, suderintas su grupės metodologija.</p>
+          <h3 class="card__title" data-lt="Pirkimų planavimas" data-en="Procurement planning"></h3>
+          <p class="card__desc" data-lt="EPSO-G grupės metinio pirkimų plano sudarymo MVP. Struktūruotas, suderintas su grupės metodologija." data-en="An MVP for building the EPSO-G Group annual procurement plan. Structured and aligned with the group methodology."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>MVP versija</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="MVP versija" data-en="MVP version"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Planing/EPSO-G_pirkimu_planavimas_MVP.html" target="_blank" rel="noopener" aria-label="Atidaryti PP-Planning įrankį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Planing/EPSO-G_pirkimu_planavimas_MVP.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Pirkimų planavimas" data-en-aria="Open: Procurement planning"></a>
         </article>
 
         <!-- ─── 2. PP-Market-KPI ─── -->
@@ -578,16 +599,16 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4.5-5"/><circle cx="12" cy="18" r="1.3"/></svg>
             </div>
-            <span class="card__badge card__badge--analysis">Stebėsena</span>
+            <span class="card__badge card__badge--analysis" data-lt="Stebėsena" data-en="Monitoring"></span>
           </div>
           <span class="card__subtitle">PP-Market-KPI</span>
-          <h3 class="card__title">Rinkos KPI skydelis</h3>
-          <p class="card__desc">Rinkos rodiklių stebėsena su šviesoforo triggeriais: kainos, lead time ir tiekimo nutrūkimo rizika. Pagrindas rizikų registrui.</p>
+          <h3 class="card__title" data-lt="Rinkos KPI skydelis" data-en="Market KPI dashboard"></h3>
+          <p class="card__desc" data-lt="Rinkos rodiklių stebėsena su šviesoforo triggeriais: kainos, lead time ir tiekimo nutrūkimo rizika. Pagrindas rizikų registrui." data-en="Monitoring of market indicators with traffic-light triggers: prices, lead time and supply disruption risk. A basis for the risk register."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>Stebėsenos skydelis</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Stebėsenos skydelis" data-en="Monitoring dashboard"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Market-KPI/EPSO-G_Rinkos_KPI_skydelis.html" target="_blank" rel="noopener" aria-label="Atidaryti Rinkos KPI skydelį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Market-KPI/EPSO-G_Rinkos_KPI_skydelis.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Rinkos KPI skydelis" data-en-aria="Open: Market KPI dashboard"></a>
         </article>
 
         <!-- ─── 3. PP-TS ─── -->
@@ -596,126 +617,191 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M9 3h7l4 4v13a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M16 3v4h4"/><path d="M12 12h4M12 16h4"/><circle cx="6" cy="14" r="3"/></svg>
             </div>
-            <span class="card__badge card__badge--planning">Specifikacija</span>
+            <span class="card__badge card__badge--planning" data-lt="Specifikacija" data-en="Specification"></span>
           </div>
           <span class="card__subtitle">PP-TS</span>
-          <h3 class="card__title">TS asistentas</h3>
-          <p class="card__desc">AI palaikomas asistentas techninėms specifikacijoms rengti. Padeda išlaikyti kokybę, struktūrą ir nuoseklumą.</p>
+          <h3 class="card__title" data-lt="TS asistentas" data-en="TS assistant"></h3>
+          <p class="card__desc" data-lt="AI palaikomas asistentas techninėms specifikacijoms rengti. Padeda išlaikyti kokybę, struktūrą ir nuoseklumą." data-en="An AI-supported assistant for drafting technical specifications. Helps maintain quality, structure and consistency."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>AI asistentas</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="AI asistentas" data-en="AI assistant"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-TS/TS_Asistentas.html" target="_blank" rel="noopener" aria-label="Atidaryti PP-TS įrankį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-TS/TS_Asistentas.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: TS asistentas" data-en-aria="Open: TS assistant"></a>
         </article>
 
-        <!-- ─── 3. PP-Cost-benefit ─── -->
+        <!-- ─── 4. PP-Cost-benefit ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-2 6a4 4 0 0 0 8 0Z"/><path d="M19 7l2 6a4 4 0 0 1-8 0Z"/></svg>
             </div>
-            <span class="card__badge card__badge--analysis">Analizė</span>
+            <span class="card__badge card__badge--analysis" data-lt="Analizė" data-en="Analysis"></span>
           </div>
           <span class="card__subtitle">PP-Cost-Benefit</span>
-          <h3 class="card__title">Kaštų-naudos analizė</h3>
-          <p class="card__desc">Struktūruota kaštų ir naudos analizės forma. Leidžia pagrįsti pirkimo sprendimus skaitiniais argumentais.</p>
+          <h3 class="card__title" data-lt="Kaštų-naudos analizė" data-en="Cost-benefit analysis"></h3>
+          <p class="card__desc" data-lt="Struktūruota kaštų ir naudos analizės forma. Leidžia pagrįsti pirkimo sprendimus skaitiniais argumentais." data-en="A structured cost-benefit analysis form. Lets you justify procurement decisions with quantitative arguments."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>Analitinis įrankis</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Analitinis įrankis" data-en="Analytical tool"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Cost-benefit/kastu_naudos_analize.html" target="_blank" rel="noopener" aria-label="Atidaryti Kaštų-naudos analizės įrankį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Cost-benefit/kastu_naudos_analize.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Kaštų-naudos analizė" data-en-aria="Open: Cost-benefit analysis"></a>
         </article>
 
-        <!-- ─── 4. PP-Durations ─── -->
+        <!-- ─── 5. PP-Durations ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/><path d="M12 2v3"/></svg>
             </div>
-            <span class="card__badge card__badge--analysis">Skaičiuoklė</span>
+            <span class="card__badge card__badge--analysis" data-lt="Skaičiuoklė" data-en="Calculator"></span>
           </div>
           <span class="card__subtitle">PP-Durations</span>
-          <h3 class="card__title">Pirkimų trukmių skaičiuoklė</h3>
-          <p class="card__desc">Pirkimo procedūros trukmės skaičiavimas pagal A ir B grafiko tipus su darbo dienų logika ir PSĮ terminais.</p>
+          <h3 class="card__title" data-lt="Pirkimų trukmių skaičiuoklė" data-en="Procurement duration calculator"></h3>
+          <p class="card__desc" data-lt="Pirkimo procedūros trukmės skaičiavimas pagal A ir B grafiko tipus su darbo dienų logika ir PSĮ terminais." data-en="Calculates the procurement procedure duration by schedule types A and B, with working-day logic and PSĮ deadlines."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>A / B tipai</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="A / B tipai" data-en="A / B types"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://jurgelaitis.github.io/PP-Durations/Litgrid_pirkimu_trukmiu_skaiciuokle.html" target="_blank" rel="noopener" aria-label="Atidaryti Trukmių skaičiuoklę"></a>
+          <a class="card__stretched-link" href="https://jurgelaitis.github.io/PP-Durations/Litgrid_pirkimu_trukmiu_skaiciuokle.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Pirkimų trukmių skaičiuoklė" data-en-aria="Open: Procurement duration calculator"></a>
         </article>
 
-        <!-- ─── 5. PP-Graphs ─── -->
+        <!-- ─── 6. PP-Graphs ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/><path d="M7 14h4M7 17h6"/></svg>
             </div>
-            <span class="card__badge card__badge--execution">Vykdymas</span>
+            <span class="card__badge card__badge--execution" data-lt="Vykdymas" data-en="Execution"></span>
           </div>
           <span class="card__subtitle">PP-Graphs</span>
-          <h3 class="card__title">Pirkimų grafikų generatorius</h3>
-          <p class="card__desc">Detalūs pirkimo procedūros grafikai su darbo dienų logika. Automatizuotas etapų ir terminų išdėstymas.</p>
+          <h3 class="card__title" data-lt="Pirkimų grafikų generatorius" data-en="Procurement schedule generator"></h3>
+          <p class="card__desc" data-lt="Detalūs pirkimo procedūros grafikai su darbo dienų logika. Automatizuotas etapų ir terminų išdėstymas." data-en="Detailed procurement procedure schedules with working-day logic. Automated layout of stages and deadlines."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>Auto-generavimas</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Auto-generavimas" data-en="Auto-generation"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Graphs/Litgrid_Pirkimu_grafiku_generatorius.html" target="_blank" rel="noopener" aria-label="Atidaryti Grafikų generatorių"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Graphs/Litgrid_Pirkimu_grafiku_generatorius.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Pirkimų grafikų generatorius" data-en-aria="Open: Procurement schedule generator"></a>
         </article>
 
-        <!-- ─── 6. PP-Protocols ─── -->
+        <!-- ─── 7. PP-Protocols ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M8 4h9l3 3v13a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"/><path d="M17 4v3h3"/><path d="M10 12l2 2 4-4"/><path d="M10 17h6"/></svg>
             </div>
-            <span class="card__badge card__badge--execution">Vykdymas</span>
+            <span class="card__badge card__badge--execution" data-lt="Vykdymas" data-en="Execution"></span>
           </div>
           <span class="card__subtitle">PP-Protocols</span>
-          <h3 class="card__title">Protokolų generatorius</h3>
-          <p class="card__desc">PSĮ atitinkančių pirkimo komisijos protokolų generavimas. Vienoda struktūra, mažiau klaidų, greitesnis darbas.</p>
+          <h3 class="card__title" data-lt="Protokolų generatorius" data-en="Protocol generator"></h3>
+          <p class="card__desc" data-lt="PSĮ atitinkančių pirkimo komisijos protokolų generavimas. Vienoda struktūra, mažiau klaidų, greitesnis darbas." data-en="Generation of PSĮ-compliant procurement committee protocols. Consistent structure, fewer errors, faster work."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>PSĮ atitiktis</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="PSĮ atitiktis" data-en="PSĮ compliance"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Protocols/LITGRID_Generatorius_v2.html" target="_blank" rel="noopener" aria-label="Atidaryti Protokolų generatorių"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Protocols/LITGRID_Generatorius_v2.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Protokolų generatorius" data-en-aria="Open: Protocol generator"></a>
         </article>
 
-        <!-- ─── 7. PP-Negotiation ─── -->
+        <!-- ─── 8. PP-Negotiation ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8l-4 3v-3a1 1 0 0 1-1-1Z"/><path d="M9 14v1a2 2 0 0 0 2 2h6l4 3v-3a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-3"/></svg>
             </div>
-            <span class="card__badge card__badge--execution">Vykdymas</span>
+            <span class="card__badge card__badge--execution" data-lt="Vykdymas" data-en="Execution"></span>
           </div>
           <span class="card__subtitle">PP-Negotiation</span>
-          <h3 class="card__title">Derybų pasirengimo įrankis</h3>
-          <p class="card__desc">AI pagrindu veikiantis derybų pasirengimo įrankis. Nuo tiekėjų pasiūlymų analizės iki derybų strategijos parengimo.</p>
+          <h3 class="card__title" data-lt="Derybų pasirengimo įrankis" data-en="Negotiation preparation tool"></h3>
+          <p class="card__desc" data-lt="AI pagrindu veikiantis derybų pasirengimo įrankis. Nuo tiekėjų pasiūlymų analizės iki derybų strategijos parengimo." data-en="An AI-powered negotiation preparation tool. From supplier offer analysis to a complete negotiation strategy."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>AI asistentas</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="AI asistentas" data-en="AI assistant"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Negotation/EPSO-G_Derybu_Pasirengimo_Irankis.html" target="_blank" rel="noopener" aria-label="Atidaryti Derybų pasirengimo įrankį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Negotation/EPSO-G_Derybu_Pasirengimo_Irankis.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Derybų pasirengimo įrankis" data-en-aria="Open: Negotiation preparation tool"></a>
         </article>
 
-        <!-- ─── 8. PP-Report ─── -->
+        <!-- ─── 9. PP-Report ─── -->
         <article class="card">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="6" y="13" width="3" height="6"/><rect x="11" y="9" width="3" height="10"/><rect x="16" y="5" width="3" height="14"/></svg>
             </div>
-            <span class="card__badge card__badge--reporting">Pažymos</span>
+            <span class="card__badge card__badge--reporting" data-lt="Pažymos" data-en="Reports"></span>
           </div>
           <span class="card__subtitle">PP-Report</span>
-          <h3 class="card__title">Tiekėjų apklausos pažyma</h3>
-          <p class="card__desc">Automatizuotas tiekėjų apklausų rezultatų konsolidavimas ir struktūruotų pažymų generavimas.</p>
+          <h3 class="card__title" data-lt="Tiekėjų apklausos pažyma" data-en="Supplier survey report"></h3>
+          <p class="card__desc" data-lt="Automatizuotas tiekėjų apklausų rezultatų konsolidavimas ir struktūruotų pažymų generavimas." data-en="Automated consolidation of supplier survey results and generation of structured reports."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span>Pažymos</span>
-            <span class="card__link">Atidaryti</span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Pažymos" data-en="Reports"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
-          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Report/PP-report.html" target="_blank" rel="noopener" aria-label="Atidaryti Pažymų įrankį"></a>
+          <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Report/PP-report.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Tiekėjų apklausos pažyma" data-en-aria="Open: Supplier survey report"></a>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ AUTHOR ════════ -->
+  <section class="section" id="author">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-lt="Apie kūrėją" data-en="About the author"></h2>
+        <span class="section__hint" data-lt="G-Procure platformos iniciatorius ir kūrėjas" data-en="Initiator and author of the G-Procure platform"></span>
+      </div>
+
+      <div class="author__card">
+        <aside class="author__identity">
+          <div class="author__monogram" aria-hidden="true">AJ</div>
+          <div class="author__name">Arūnas Jurgelaitis</div>
+          <div class="author__role" data-lt="Pirkimų skyriaus vadovas" data-en="Head of Procurement Division"></div>
+          <div class="author__company">AB „Litgrid“</div>
+        </aside>
+
+        <div class="author__body">
+          <p class="author__bio" data-lt="Pirkimų funkcijos vadovas AB „Litgrid“, Lietuvos elektros perdavimo sistemos operatoriuje ir nacionalinės svarbos energetikos infrastruktūros įmonėje. Atsakomybės sritis apima viešųjų pirkimų valdymą pagal Pirkimų, atliekamų vandentvarkos, energetikos, transporto ar pašto paslaugų srities perkančiųjų subjektų, įstatymą (PSĮ), strateginį pirkimų planavimą, tiekėjų santykių valdymą, pirkimų rizikų valdymą ir procesų skaitmeninimą. G-Procure platforma yra šio darbo tęsinys: iniciatyva, kuria sudėtingi pirkimų procesai paverčiami skaidresniais, efektyvesniais ir patogiau pasiekiamais visai EPSO-G grupei." data-en="Head of the procurement function at Litgrid AB, Lithuania's electricity transmission system operator and a critical national energy infrastructure company. The role spans public procurement governance under the Law on Procurement by Contracting Entities in the Water, Energy, Transport and Postal Services Sectors (PSĮ), strategic procurement planning, supplier relationship management, procurement risk management and process digitalisation. The G-Procure platform is a continuation of that work: an initiative to make complex procurement processes more transparent, efficient and accessible across the EPSO-G Group."></p>
+
+          <div class="author__contacts">
+            <div class="author__contact">
+              <span class="author__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <span class="author__contact-text">
+                <span class="author__contact-label" data-lt="Adresas" data-en="Address"></span>
+                <span class="author__contact-value" data-lt="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lietuva" data-en="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lithuania"></span>
+              </span>
+            </div>
+
+            <div class="author__contact">
+              <span class="author__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-1Z"/></svg>
+              </span>
+              <span class="author__contact-text">
+                <span class="author__contact-label" data-lt="Telefonas" data-en="Phone"></span>
+                <span class="author__contact-value"><a href="tel:+37065611391">+370 656 11391</a></span>
+              </span>
+            </div>
+
+            <div class="author__contact">
+              <span class="author__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <span class="author__contact-text">
+                <span class="author__contact-label" data-lt="El. paštas" data-en="Email"></span>
+                <span class="author__contact-value"><a href="mailto:arunas.jurgelaitis@litgrid.eu">arunas.jurgelaitis@litgrid.eu</a></span>
+              </span>
+            </div>
+
+            <div class="author__contact">
+              <span class="author__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="6.8" r="0.6"/><path d="M11 17v-4.2a2.8 2.8 0 0 1 5.6 0V17"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
+              </span>
+              <span class="author__contact-text">
+                <span class="author__contact-label">LinkedIn</span>
+                <span class="author__contact-value"><a href="https://www.linkedin.com/in/arunas-jurgelaitis" target="_blank" rel="noopener">linkedin.com/in/arunas-jurgelaitis</a></span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -735,13 +821,72 @@
           <rect x="215.90047" y="33.58344" width="21.02269" height="7.02924"/>
         </g>
       </svg>
-      <span>· G-Procure platforma · 2026</span>
+      <span data-lt="· G-Procure platforma · 2026" data-en="· G-Procure platform · 2026"></span>
     </div>
     <div class="footer__meta">
-      Sukurta su <span style="color:var(--color-emerald);">●</span> EPSO-G grupei · <a href="https://github.com/Jurgelaitis" target="_blank" rel="noopener">github.com/Jurgelaitis</a>
+      <span data-lt="Sukurta EPSO-G grupei" data-en="Built for the EPSO-G Group"></span> · <a href="https://github.com/Jurgelaitis" target="_blank" rel="noopener">github.com/Jurgelaitis</a>
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var STORAGE_KEY = "gprocure-lang";
+
+  function detectLang() {
+    try {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "lt" || saved === "en") return saved;
+    } catch (e) {}
+    // Location proxy: a visitor physically in Lithuania resolves to Europe/Vilnius.
+    try {
+      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+      if (tz === "Europe/Vilnius") return "lt";
+    } catch (e) {}
+    // Secondary signal: a Lithuanian-language browser locale.
+    var langs = navigator.languages || [navigator.language || navigator.userLanguage || ""];
+    for (var i = 0; i < langs.length; i++) {
+      if (String(langs[i]).toLowerCase().indexOf("lt") === 0) return "lt";
+    }
+    // Default for everyone abroad.
+    return "en";
+  }
+
+  function applyLang(lang) {
+    document.documentElement.setAttribute("lang", lang);
+
+    var nodes = document.querySelectorAll("[data-lt]");
+    for (var i = 0; i < nodes.length; i++) {
+      var value = nodes[i].getAttribute("data-" + lang);
+      if (value !== null) nodes[i].innerHTML = value;
+    }
+
+    var ariaNodes = document.querySelectorAll("[data-lt-aria]");
+    for (var j = 0; j < ariaNodes.length; j++) {
+      var ariaValue = ariaNodes[j].getAttribute("data-" + lang + "-aria");
+      if (ariaValue !== null) ariaNodes[j].setAttribute("aria-label", ariaValue);
+    }
+
+    var buttons = document.querySelectorAll(".lang-switch__btn");
+    for (var k = 0; k < buttons.length; k++) {
+      buttons[k].setAttribute(
+        "aria-pressed",
+        buttons[k].getAttribute("data-lang") === lang ? "true" : "false"
+      );
+    }
+  }
+
+  applyLang(detectLang());
+
+  document.addEventListener("click", function (event) {
+    var btn = event.target.closest ? event.target.closest(".lang-switch__btn") : null;
+    if (!btn) return;
+    var lang = btn.getAttribute("data-lang");
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    applyLang(lang);
+  });
+})();
+</script>
 
 </body>
 </html>
