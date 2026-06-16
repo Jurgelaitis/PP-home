@@ -94,7 +94,7 @@
   }
 
   /* Anchor offset below the sticky header */
-  #tools, #apie { scroll-margin-top: 88px; }
+  #tools { scroll-margin-top: 88px; }
 
   /* ────────────────  SKIP LINK  ──────────────── */
   .skip-link {
@@ -344,6 +344,7 @@
   .card__badge--analysis { background: #FFF8E8; color: #8C6A1F; border-color: #F4E4BD; }
   .card__badge--execution { background: var(--color-green-5); color: var(--color-emerald-120); border-color: var(--color-green-15); }
   .card__badge--reporting { background: #F2EBFF; color: #5B3DAA; border-color: #DBCDF7; }
+  .card__badge--compliance { background: var(--color-cyan-5); color: #007E96; border-color: rgba(0, 165, 196, 0.22); }
 
   .card__title {
     font-size: 20px;
@@ -401,126 +402,6 @@
   }
   .card__owner-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-emerald-50); }
 
-  /* ────────────────  AUTHOR  ──────────────── */
-  .author-section { padding-top: var(--space-2); }
-
-  .author__card {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    background: var(--color-white);
-    border: 1px solid var(--color-graphite-15);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    overflow: hidden;
-  }
-
-  .author__identity {
-    background:
-      radial-gradient(circle at 30% 0%, rgba(22, 196, 146, 0.18), transparent 55%),
-      linear-gradient(160deg, #15413d 0%, #0b2a33 100%);
-    padding: var(--space-5) var(--space-4);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-  }
-
-  .author__photo-wrap {
-    margin-bottom: var(--space-3);
-    position: relative;
-  }
-  .author__photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 25%;
-    display: block;
-    box-shadow:
-      0 0 0 4px rgba(22, 196, 146, 0.55),
-      0 0 0 10px rgba(22, 196, 146, 0.12),
-      0 16px 32px rgba(0, 0, 0, 0.4);
-  }
-  .author__photo--fallback {
-    display: grid;
-    place-items: center;
-    background: linear-gradient(160deg, var(--color-emerald-120) 0%, var(--color-blue) 100%);
-    color: var(--color-white);
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-  }
-
-  .author__name {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--color-white);
-    letter-spacing: -0.01em;
-  }
-  .author__role {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-emerald-50);
-    margin-top: var(--space-1);
-  }
-  .author__company {
-    font-size: 14px;
-    color: var(--color-graphite-30);
-    margin-top: 4px;
-  }
-
-  .author__body { padding: var(--space-5); }
-  .author__bio {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--color-graphite);
-    max-width: 680px;
-    margin-bottom: var(--space-4);
-  }
-  .author__contacts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3) var(--space-4);
-    padding-top: var(--space-3);
-    border-top: 1px solid var(--color-graphite-15);
-  }
-  .author__contact { display: flex; gap: var(--space-2); align-items: flex-start; }
-  .author__contact-icon {
-    width: 40px; height: 40px;
-    flex-shrink: 0;
-    border-radius: var(--radius-sm);
-    background: var(--color-green-5);
-    border: 1px solid var(--color-green-15);
-    color: var(--color-emerald);
-    display: grid;
-    place-items: center;
-  }
-  .author__contact-icon svg {
-    width: 18px; height: 18px;
-    stroke: currentColor; stroke-width: 1.5; fill: none;
-    stroke-linecap: round; stroke-linejoin: round;
-  }
-  .author__contact-text { display: flex; flex-direction: column; min-width: 0; }
-  .author__contact-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-graphite-50);
-    margin-bottom: 2px;
-  }
-  .author__contact-value { font-size: 14px; color: var(--color-graphite); word-break: break-word; }
-  .author__contact-value a {
-    color: var(--color-emerald);
-    font-weight: 600;
-    transition: color var(--transition-fast);
-  }
-  .author__contact-value a:hover { color: var(--color-emerald-120); }
-  .author__contact-value a:focus-visible { outline: 2px solid var(--color-emerald); outline-offset: 2px; border-radius: 4px; }
-
   /* ────────────────  REVEAL ON SCROLL  ──────────────── */
   .js .reveal {
     opacity: 0;
@@ -566,12 +447,6 @@
   .footer__meta a:hover { color: var(--color-emerald); border-color: var(--color-emerald); }
 
   /* ────────────────  RESPONSIVE  ──────────────── */
-  @media (max-width: 860px) {
-    .author__card { grid-template-columns: 1fr; }
-    .author__identity { padding: var(--space-4); align-items: center; text-align: center; }
-    .author__body { padding: var(--space-4) var(--space-3); }
-    .author__contacts { grid-template-columns: 1fr; }
-  }
   @media (max-width: 640px) {
     .site-header__inner { height: 64px; }
     .brand__product-tag { display: none; }
@@ -579,7 +454,6 @@
     .hero { padding: var(--space-5) 0 var(--space-4); }
     .grid { grid-template-columns: 1fr; }
     .card__top { flex-direction: column; gap: var(--space-2); }
-    .author__photo { width: 140px; height: 140px; }
   }
 </style>
 </head>
@@ -611,7 +485,7 @@
     </div>
 
     <div class="site-header__actions">
-      <a class="nav-link" href="#apie" data-lt="Apie kūrėją" data-en="About the author"></a>
+      <a class="nav-link" href="G-Procure_About.html" data-lt="Apie kūrėją" data-en="About the author"></a>
       <div class="header-meta">
         <span class="header-meta__dot" aria-hidden="true"></span>
         <span data-lt="Sistema veikia · v1.1" data-en="System online · v1.1"></span>
@@ -680,7 +554,25 @@
           <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Market-KPI/EPSO-G_Rinkos_KPI_skydelis.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Rinkos rodiklių stebėsena" data-en-aria="Open: Market indicators monitoring"></a>
         </article>
 
-        <!-- ─── 3. PP-TS ─── -->
+        <!-- ─── 3. PP-ESG ─── -->
+        <article class="card reveal">
+          <div class="card__top">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="card__badge card__badge--compliance" data-lt="Atitiktis" data-en="Compliance"></span>
+          </div>
+          <span class="card__subtitle">PP-ESG</span>
+          <h3 class="card__title" data-lt="ESG ir atitikties variklis" data-en="ESG and compliance engine"></h3>
+          <p class="card__desc" data-lt="Centrinė tiekėjų ESG rizikos, sankcijų patikrų ir CSRD/ESRS duomenų sistema. Viena tiesos versija, kurią per API naudoja kiti G-Procure moduliai." data-en="A central system for supplier ESG risk, sanctions screening and CSRD/ESRS data. A single source of truth consumed by other G-Procure modules via API."></p>
+          <div class="card__footer">
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Centrinis variklis" data-en="Central engine"></span></span>
+            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
+          </div>
+          <a class="card__stretched-link" href="https://jurgelaitis.github.io/PP-Esg/" target="_blank" rel="noopener" data-lt-aria="Atidaryti: ESG ir atitikties variklis" data-en-aria="Open: ESG and compliance engine"></a>
+        </article>
+
+        <!-- ─── 4. PP-TS ─── -->
         <article class="card reveal">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
@@ -698,7 +590,7 @@
           <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-TS/TS_Asistentas.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: TS asistentas" data-en-aria="Open: TS assistant"></a>
         </article>
 
-        <!-- ─── 4. PP-Cost-benefit ─── -->
+        <!-- ─── 5. PP-Cost-benefit ─── -->
         <article class="card reveal">
           <div class="card__top">
             <div class="card__icon" aria-hidden="true">
@@ -716,24 +608,6 @@
           <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Cost-benefit/kastu_naudos_analize.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Kaštų-naudos analizė" data-en-aria="Open: Cost-benefit analysis"></a>
         </article>
 
-        <!-- ─── 5. PP-Durations ─── -->
-        <article class="card reveal">
-          <div class="card__top">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/><path d="M12 2v3"/></svg>
-            </div>
-            <span class="card__badge card__badge--analysis" data-lt="Skaičiuoklė" data-en="Calculator"></span>
-          </div>
-          <span class="card__subtitle">PP-Durations</span>
-          <h3 class="card__title" data-lt="Pirkimų trukmių skaičiuoklė" data-en="Procurement duration calculator"></h3>
-          <p class="card__desc" data-lt="Pirkimo procedūros trukmės skaičiavimas pagal A ir B grafiko tipus su darbo dienų logika ir PSĮ terminais." data-en="Calculates the procurement procedure duration by schedule types A and B, with working-day logic and PSĮ deadlines."></p>
-          <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="A / B tipai" data-en="A / B types"></span></span>
-            <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
-          </div>
-          <a class="card__stretched-link" href="https://jurgelaitis.github.io/PP-Durations/Litgrid_pirkimu_trukmiu_skaiciuokle.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Pirkimų trukmių skaičiuoklė" data-en-aria="Open: Procurement duration calculator"></a>
-        </article>
-
         <!-- ─── 6. PP-Graphs ─── -->
         <article class="card reveal">
           <div class="card__top">
@@ -744,9 +618,9 @@
           </div>
           <span class="card__subtitle">PP-Graphs</span>
           <h3 class="card__title" data-lt="Pirkimų grafikų generatorius" data-en="Procurement schedule generator"></h3>
-          <p class="card__desc" data-lt="Detalūs pirkimo procedūros grafikai su darbo dienų logika. Automatizuotas etapų ir terminų išdėstymas." data-en="Detailed procurement procedure schedules with working-day logic. Automated layout of stages and deadlines."></p>
+          <p class="card__desc" data-lt="Detalūs pirkimo procedūros grafikai ir trukmių skaičiavimas." data-en="Detailed procurement procedure schedules and duration calculation."></p>
           <div class="card__footer">
-            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Auto-generavimas" data-en="Auto-generation"></span></span>
+            <span class="card__owner"><span class="card__owner-dot"></span><span data-lt="Grafikai + trukmės" data-en="Schedules + durations"></span></span>
             <span class="card__link" data-lt="Atidaryti" data-en="Open"></span>
           </div>
           <a class="card__stretched-link" href="https://Jurgelaitis.github.io/PP-Graphs/Litgrid_Pirkimu_grafiku_generatorius.html" target="_blank" rel="noopener" data-lt-aria="Atidaryti: Pirkimų grafikų generatorius" data-en-aria="Open: Procurement schedule generator"></a>
@@ -809,73 +683,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ════════ AUTHOR ════════ -->
-  <section class="section author-section" id="apie">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-lt="Apie kūrėją" data-en="About the author"></h2>
-        <span class="section__hint" data-lt="G-Procure platformos iniciatorius ir kūrėjas" data-en="Initiator and author of the G-Procure platform"></span>
-      </div>
-
-      <div class="author__card reveal">
-        <aside class="author__identity">
-          <div class="author__photo-wrap">
-            <img class="author__photo" id="authorPhoto" src="AJ%20photo.jpg" alt="Arūnas Jurgelaitis" loading="lazy" />
-          </div>
-          <div class="author__name">Arūnas Jurgelaitis</div>
-          <div class="author__role" data-lt="Pirkimų skyriaus vadovas" data-en="Head of Procurement Division"></div>
-          <div class="author__company">AB „Litgrid“</div>
-        </aside>
-
-        <div class="author__body">
-          <p class="author__bio" data-lt="Pirkimų funkcijos vadovas AB „Litgrid“, Lietuvos elektros perdavimo sistemos operatoriuje ir nacionalinės svarbos energetikos infrastruktūros įmonėje. Atsakomybės sritis apima viešųjų pirkimų valdymą pagal Pirkimų, atliekamų vandentvarkos, energetikos, transporto ar pašto paslaugų srities perkančiųjų subjektų, įstatymą (PSĮ), strateginį pirkimų planavimą, tiekėjų santykių valdymą, pirkimų rizikų valdymą ir procesų skaitmeninimą. G-Procure platforma yra šio darbo tęsinys: iniciatyva, kuria sudėtingi pirkimų procesai paverčiami skaidresniais, efektyvesniais ir patogiau pasiekiamais visai EPSO-G grupei." data-en="Head of the procurement function at Litgrid AB, Lithuania's electricity transmission system operator and a critical national energy infrastructure company. The role spans public procurement governance under the Law on Procurement by Contracting Entities in the Water, Energy, Transport and Postal Services Sectors (PSĮ), strategic procurement planning, supplier relationship management, procurement risk management and process digitalisation. The G-Procure platform is a continuation of that work: an initiative to make complex procurement processes more transparent, efficient and accessible across the EPSO-G Group."></p>
-
-          <div class="author__contacts">
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="Adresas" data-en="Address"></span>
-                <span class="author__contact-value" data-lt="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lietuva" data-en="Karlo Gustavo Emilio Manerheimo g. 8, 05131 Vilnius, Lithuania"></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-1Z"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="Telefonas" data-en="Phone"></span>
-                <span class="author__contact-value"><a href="tel:+37065611391">+370 656 11391</a></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label" data-lt="El. paštas" data-en="Email"></span>
-                <span class="author__contact-value"><a href="mailto:arunas.jurgelaitis@litgrid.eu">arunas.jurgelaitis@litgrid.eu</a></span>
-              </span>
-            </div>
-
-            <div class="author__contact">
-              <span class="author__contact-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="6.8" r="0.6"/><path d="M11 17v-4.2a2.8 2.8 0 0 1 5.6 0V17"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
-              </span>
-              <span class="author__contact-text">
-                <span class="author__contact-label">LinkedIn</span>
-                <span class="author__contact-value"><a href="https://www.linkedin.com/in/arunas-jurgelaitis" target="_blank" rel="noopener">linkedin.com/in/arunas-jurgelaitis</a></span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <!-- ════════ FOOTER ════════ -->
@@ -895,7 +702,7 @@
       <span data-lt="· G-Procure platforma · 2026" data-en="· G-Procure platform · 2026"></span>
     </div>
     <div class="footer__meta">
-      <a href="#apie" data-lt="Apie kūrėją" data-en="About the author"></a> · <span data-lt="Sukurta EPSO-G grupei" data-en="Built for the EPSO-G Group"></span> · <a href="https://github.com/Jurgelaitis" target="_blank" rel="noopener">github.com/Jurgelaitis</a>
+      <a href="G-Procure_About.html" data-lt="Apie kūrėją" data-en="About the author"></a> · <span data-lt="Sukurta EPSO-G grupei" data-en="Built for the EPSO-G Group"></span> · <a href="https://github.com/Jurgelaitis" target="_blank" rel="noopener">github.com/Jurgelaitis</a>
     </div>
   </div>
 </footer>
@@ -956,26 +763,6 @@
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
     applyLang(lang);
   });
-
-  // ── Author photo: graceful fallback ──
-  // Tries the underscore file name first if the original is missing,
-  // then falls back to an initials monogram so the layout never breaks.
-  var photo = document.getElementById("authorPhoto");
-  if (photo) {
-    var triedAlt = false;
-    photo.addEventListener("error", function () {
-      if (!triedAlt) {
-        triedAlt = true;
-        photo.src = "AJ_photo.jpg";
-        return;
-      }
-      var fallback = document.createElement("div");
-      fallback.className = "author__photo author__photo--fallback";
-      fallback.setAttribute("aria-hidden", "true");
-      fallback.textContent = "AJ";
-      photo.parentNode.replaceChild(fallback, photo);
-    });
-  }
 
   // ── Reveal on scroll ──
   var revealEls = document.querySelectorAll(".reveal");
